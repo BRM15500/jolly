@@ -34,6 +34,7 @@ export class EmpleadosCrudComponent implements OnInit {
 
     if(this.currentUser !== null){
       if(this.currentUser.rol !== 2){
+        alert(this.currentUser.username+" no tiene acceso a esta pantalla\n Será redirijido al Inicio");
         this.router.navigate(['/Home']);
       }else{
         this.showPage = true;
